@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepCor-Denoising | fMRI Denoising Tool</title>
+    <link rel="icon" type="image/png" href="assets/logos/DeepCor-logo-v2-px.png">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo">
+                    <img src="assets/logos/DeepCor-logo-v2-px.png" alt="DeepCor Logo" style="height: 40px;">
+                    DeepCor
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#usage">Usage</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="https://github.com/Aglinskas/deepcor-fmri-toolbox" target="_blank"
+                            class="btn btn-primary"
+                            style="background:var(--primary-color);color:white;padding:0.5rem 1rem;">GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <!-- Left Logo -->
+            <div class="hero-side">
+                <img src="assets/logos/DeepCor-logo-v2-px.png" alt="DeepCor Logo" class="hero-logo-img">
+            </div>
+
+            <!-- Center Content -->
+            <div class="hero-main">
+                <h1>DeepCor-Denoising</h1>
+                <p>A deep-learning based fMRI denoising tool using Contrastive Variational Autoencoders (CVAEs).</p>
+                <div class="hero-btns">
+                    <a href="#usage" class="btn btn-primary">Get Started</a>
+                    <a href="https://rdcu.be/eSemF" target="_blank" class="btn btn-outline-dark">Read Paper</a>
+                </div>
+            </div>
+
+            <!-- Right Feature Figure -->
+            <div class="hero-side">
+                <img src="assets/logos/DeepCor-featfig.png" alt="DeepCor Feature Figure" class="hero-feat-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">What is DeepCor?</h2>
+            <div class="about-content">
+                <p>DeepCor is a state-of-the-art fMRI denoising tool designed to enhance the quality of task-based and
+                    resting-state fMRI data. By leveraging Contrastive Variational Autoencoders (CVAEs), DeepCor
+                    effectively separates neural signals from noise, providing researchers with cleaner data for more
+                    accurate analysis.</p>
+                <br>
+                <p>Based on the CVAE architecture (Abid & Zou, 2019), DeepCor represents a significant step forward in
+                    neuroimaging data preprocessing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Section -->
+    <section id="usage" style="background-color: white;">
+        <div class="container">
+            <h2 class="section-title">How to Use DeepCor</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="assets/logos/PythonLogo.jpg" alt="Python Logo" class="card-logo">
+                    <h3>DeepCor v2 (Latest)</h3>
+                    <p>The latest version of DeepCor is available as a Python toolbox. It supports GPU acceleration for
+                        faster processing.</p>
+                    <br>
+                    <a href="https://github.com/Aglinskas/deepcor-fmri-toolbox" target="_blank">View on GitHub
+                        &rarr;</a>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/logos/GoogleColabLogo.jpg" alt="Colab Logo" class="card-logo">
+                    <h3>Google Colab</h3>
+                    <p>Try DeepCor immediately without local installation using our Google Colab notebook. Ideal for
+                        testing and small datasets.</p>
+                    <br>
+                    <a href="https://drive.google.com/drive/folders/1Eq2MJMt_8WYdbgqyGURhY8eENISV7F4p?usp=sharing"
+                        target="_blank">Run in Colab &rarr;</a>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/logos/sccn_logo.png" alt="SCCN Logo" class="card-logo">
+                    <h3>DeepCor v1</h3>
+                    <p>Access the original research code used in our initial publications. Useful for reproducibility.
+                    </p>
+                    <br>
+                    <a href="https://github.com/sccnlab/DeepCor" target="_blank">View v1 Code &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="container">
+            <h2 class="section-title">Publications & News</h2>
+            <div class="pub-list">
+                <!-- Pub 1 -->
+                <div class="pub-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="flex: 1;">
+                            <div class="pub-title">DeepCor: Denoising fMRI Data with Contrastive Autoencoders</div>
+                            <div class="pub-authors">Zhu*, Y., Aglinskas*, A. & Anzellotti, S. (*co-first authors)</div>
+                            <div class="pub-meta">Nature Methods (2025)</div>
+                            <a href="https://rdcu.be/eSemF" target="_blank" class="btn"
+                                style="background:var(--primary-color);color:white;padding:0.4rem 1rem;font-size:0.9rem;">Read
+                                Article</a>
+                        </div>
+                        <img src="assets/logos/NatMethodsLogo.jpg" alt="Nature Methods" class="pub-logo">
+                    </div>
+                </div>
+
+                <!-- Pub 2 -->
+                <div class="pub-item">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <div class="pub-title">Denoising fMRI data using Contrastive Variational Autoencoders</div>
+                            <div class="pub-authors">Aglinskas, A., Zhu, Y & Anzellotti, S.</div>
+                            <div class="pub-meta">NeurIPS Workshop "Data and Brain and Mind" (Dec 2025)</div>
+                            <a href="https://openreview.net/attachment?id=01XbdnDhjB&name=pdf" target="_blank"
+                                class="btn"
+                                style="background:var(--secondary-color);color:white;padding:0.4rem 1rem;font-size:0.9rem;">View
+                                Poster PDF</a>
+                            <a href="https://github.com/Aglinskas/pub-neurips-workshop-DBM" target="_blank"
+                                style="margin-left:1rem;font-size:0.9rem;">View Code</a>
+                        </div>
+                        <img src="assets/logos/NeurIPSlogo.png" alt="NeurIPS" class="pub-logo">
+                    </div>
+                </div>
+
+                <!-- Pub 3 (Preprint) -->
+                <div class="pub-item">
+                    <div class="pub-title">DeepCor (Preprint)</div>
+                    <div class="pub-authors">Zhu*, Y., Aglinskas*, A. & Anzellotti, S.</div>
+                    <div class="pub-meta">bioRxiv (2023)</div>
+                    <a href="https://www.biorxiv.org/content/10.1101/2023.10.31.565011v1" target="_blank"
+                        style="font-size:0.9rem;">Read Preprint</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" style="background-color: white;">
+        <div class="container">
+            <h2 class="section-title">The Team</h2>
+            <div class="team-grid">
+                <!-- Member 1 -->
+                <div class="team-card">
+                    <img src="assets/imgs/Yu_Zhu.jpg" alt="Yu Zhu" class="team-photo">
+                    <div class="team-name">Yu Zhu</div>
+                    <div class="team-role">Brown University, USA</div>
+                    <div class="team-links">
+                        <a href="mailto:yu_zhu@brown.edu" title="Email" target="_blank">✉️</a>
+                        <a href="http://www.linkedin.com/in/yu-zoe-zhu-982579203" target="_blank"
+                            title="LinkedIn">in</a>
+                        <a href="https://scholar.google.com/citations?user=DndiAD8AAAAJ&hl=en" target="_blank"
+                            title="Google Scholar">🎓</a>
+                        <a href="https://x.com/ZhuYu98790" target="_blank" title="Twitter">X</a>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="team-card">
+                    <img src="assets/imgs/Aidas_Aglinskas.jpg" alt="Aidas Aglinskas" class="team-photo">
+                    <div class="team-name">Aidas Aglinskas</div>
+                    <div class="team-role">Boston College, USA</div>
+                    <div class="team-links">
+                        <a href="#" class="disabled-link" title="Email">✉️</a>
+                        <a href="#" class="disabled-link" title="LinkedIn">in</a>
+                        <a href="#" class="disabled-link" title="Google Scholar">🎓</a>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="team-card">
+                    <img src="assets/imgs/Stefano_Anzellotti.jpg" alt="Stefano Anzellotti" class="team-photo">
+                    <div class="team-name">Stefano Anzellotti</div>
+                    <div class="team-role">Boston College, USA</div>
+                    <div class="team-links">
+                        <a href="mailto:anzellos@bc.edu" title="Email" target="_blank">✉️</a>
+                        <a href="https://scholar.google.com/citations?user=tK5W2p0AAAAJ&hl=en" target="_blank"
+                            title="Google Scholar">🎓</a>
+                        <a href="#" class="disabled-link" title="Bluesky">🦋</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 DeepCor Team. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.7;">
+                Built with <a href="https://github.com/Aglinskas/deepcor-webpage-github" target="_blank"
+                    style="text-decoration: underline;">GitHub Pages</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

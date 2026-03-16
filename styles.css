@@ -1,0 +1,456 @@
+/* Global Styles */
+:root {
+    /* Extracted Logo Colors */
+    --primary-color: #162738;
+    /* Dark Navy Blue */
+    --secondary-color: #047101;
+    /* Deep Green */
+    --accent-color: #4CAF50;
+    /* Lighter Green for buttons/highlights */
+    --dark-accent: #0E1A26;
+    /* Darker Navy */
+
+    --text-color: #333;
+    --bg-color: #F7FFF7;
+    /* Very light mint/white background */
+    --light-bg: #ffffff;
+
+    --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    --spacing-unit: 1rem;
+    --max-width: 1200px;
+    --header-height: 70px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+ul {
+    list-style-position: inside;
+}
+
+/* Container */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header & Nav */
+header {
+    background-color: var(--light-bg);
+    box-shadow: 0 2px 10px rgba(26, 83, 92, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    /* Ensure space between logo and links */
+}
+
+.logo {
+    display: flex;
+    /* Activate flex for logo image and text */
+    align-items: center;
+    /* Vertically center image and text */
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+    gap: 0.8rem;
+    /* Space between logo image and text */
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    margin-top: var(--header-height);
+    background: white;
+    /* Changed from gradient to white */
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-main {
+    flex: 2;
+    max-width: 800px;
+}
+
+.hero-side {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero-logo-img {
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+}
+
+.hero-feat-img {
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    /* Optional slight rounding */
+}
+
+.hero h1 {
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    color: var(--text-color);
+    max-width: 100%;
+    /* Reset max-width as it's controlled by flex container */
+}
+
+/* Updated Buttons for White Background */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(4, 113, 1, 0.3);
+    /* Green shadow */
+    color: white;
+    background-color: #035a01;
+    /* Darker green */
+}
+
+.btn-outline-dark {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 12px rgba(22, 39, 56, 0.3);
+}
+
+/* Primary Button Override for specific cases if needed */
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-accent);
+}
+
+/* Sections */
+section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+/* About Section */
+.about-content {
+    background: white;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(26, 83, 92, 0.05);
+    text-align: center;
+    font-size: 1.1rem;
+    border: 1px solid rgba(78, 205, 196, 0.1);
+}
+
+/* Features/Usage grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(26, 83, 92, 0.05);
+    border-top: 4px solid var(--secondary-color);
+    transition: transform 0.2s;
+    position: relative;
+    /* For positioning if needed */
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-logo {
+    height: 40px;
+    width: auto;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Publications */
+.pub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.pub-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(26, 83, 92, 0.05);
+    border-left: 5px solid var(--primary-color);
+}
+
+.pub-logo {
+    height: 150px;
+    /* Tripled from 50px */
+    width: auto;
+    max-width: 300px;
+    /* Increased to allow for larger height */
+    object-fit: obtain;
+    margin-left: 2rem;
+}
+
+.pub-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.pub-authors {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.pub-meta {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--dark-accent);
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    /* Increased gap */
+}
+
+.team-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(26, 83, 92, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(26, 83, 92, 0.15);
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.5rem;
+    border: 4px solid var(--secondary-color);
+    display: block;
+}
+
+.team-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.team-role {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.team-links a {
+    font-size: 0.9rem;
+    color: #555;
+    border: 1px solid #ddd;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.team-links a:hover {
+    background-color: var(--main-color, var(--primary-color));
+    /* Fallback */
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+footer a {
+    color: var(--secondary-color);
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .hero-side {
+        order: -1;
+        /* Put logo on top on mobile, or remove order to keep logical flow */
+    }
+
+    .hero-main {
+        order: 0;
+    }
+
+    .hero-feat-img {
+        /* Hide feature image on small mobile screens if it crowds, or keep it */
+        max-width: 80%;
+    }
+}
